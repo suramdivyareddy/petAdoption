@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption</title>
+    <link rel ="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <div class="nav-container">
+        <div class="wrapper">
+            <nav>
+                <ul class="nav-items">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="findadog.html">Find a Pet</a>
+                    </li>
+                    <li>
+                        <a href="addapet.html">Add a Pet</a>           
+                             </li>
+                    <li>
+                        <a href="about.html">About pet Adoption</a>
+                    </li> 
+                                      
+                </ul>
+                <ul class="nav-Btn-container">
+                    <li>
+                        <a href="signup.html">Sign Up</a>
+                        <a href="login.html">Login</a>
+                    </li>
+                </ul>
+                
+
+            </nav>        
+        </div>
+    </div>
+   
+    <div class="box1">
+        <form id="contactForm">
+        <h1>ADOPT</h1>
+        <input type="text" placeholder="First Name" id="firstname">
+        <input type="text" placeholder="Last Name" id="lastname">
+        <input type="text" placeholder="State" id="state">
+        <input type="text" placeholder="Zip Code" id="zipcode">
+        <input type="text" placeholder="E-mail" id="email">
+        <input type="password" placeholder="password" id="password">
+        <input type="password" placeholder="confirm password" id="confirmpassword">
+    </form>
+        <button type="submit" id="adopt">Adopt</button>   
+        <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+<script src="adopt.js"></script>
+    </div>
+</body>
+<style>
+    #adopt{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #FD9271;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+#adopt:hover
+{
+    background: #FD9271;
+}
+    #signOut
+    {
+    font-size: 18px;
+    color: #FFFFFF;
+    text-decoration:none;
+    background: #006666;
+    border-radius: 30px;
+    padding: 10px 48px;
+    display: inline-block;
+    transition: 300ms;
+}
+#signOut li :hover{
+    transform: translateY(-2px);
+}
+#signOut li {
+     list-style: none;
+     margin-bottom: 280px;
+}
+</style>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption</title>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-auth.js"></script>
+    <script src="signup.js"></script>
+    <link rel ="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <div class="nav-container">
+        <div class="wrapper">
+            <nav>
+                <ul class="nav-items">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="findadog.html">Find a pet</a>                   
+                    </li>
+                    <li>
+                        <a href="addapet.html">Add a pet</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About pet Adoption</a>
+                    </li> 
+                                      
+                </ul>
+                <ul class="nav-Btn-container">
+                    <li>
+                        <button onclick="signOut()" id="signOut">Log Out</button>        
+                    </li>
+                </ul>
+                
+
+            </nav>        
+        </div>
+    </div>
+   
+    <div class="header-container">
+        <div class="wrapper">
+            <header>
+                <div class="hero-content">
+                    <h1>Find the right Pet for you</h1>
+                    <h3>Looking for a pet of your dreams?<br>
+                        This is just the place for it.</h3>
+                    <nav>
+                        <ul class="nav-items1">
+                            <li>
+                                <a  class="header-Btn-container" href="findadog.html">
+                                    <img class="dog-btn" src="images/dog-icon.svg" alt="">Find a dog
+                                </a> |               
+                                <a class="header-Btn-container" href="findacat.html">
+                                    <img class="cat-btn" src="images/cat-icon.svg" alt="" >Find a cat
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="hero-images">
+                    <img src="images/greenpic.png" alt="">
+                    <div class="photo-bg"></div>
+                </div>
+            </header>
+        </div>
+    </div>
+    <div class="lower-container">
+        <div class="wrapper">
+            <header>
+                <div class="low-content">
+                    <h2>Pets available for adoption near you</h2>
+                    <a class="seemore_Btn" href="findadog.html">See more</a>
+                </div>
+                
+            </header>
+        </div>
+    </div>
+    <div class="pets">
+        <div class="pets_wrapper">
+            <div class="pets_cards">
+                <img src="images/dog3.jpg">
+                <h3>Bell</h3>
+                <p>Age:6 months</p>
+                <p>Gender:Female</p>
+                <div class="pets_btn"><a href="bell.html"><button>Details</button></a></div>
+            </div>
+            <div class="pets_cards">
+                <img src="images/dog4.jpg">
+                <h3>Orion</h3>
+                <p>Age: 1 year</p>
+                <p>Gender:Female</p>
+                <div class="pets_btn"><a href="orion.html"><button>Details</button></a></div>
+            </div>
+            <div class="pets_cards">
+                <img src="images/dog5.svg">
+                <h3>Bartine</h3>
+                <p>Age:10 months</p>
+                <p>Gender:Male</p>
+                <div class="pets_btn"><a href="bartine.html"><button>Details</button></a></div>
+            </div>
+            <div class="pets_cards">
+                <img src="images/dog6.jpg">
+                <h3>Bailey</h3>
+                <p>Age:1 year</p>
+                <p>Gender:Male</p>
+                <div class="pets_btn"><a href="bailey.html"><button>Details</button></a></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_container">
+        <div class="footer">
+               <div class="footer_link item1">
+                    <h2>About Us</h2>
+                    <a href="">Blog</a>
+                    <a href="">Demo</a>
+                    <a href="">Customers</a>
+                    <a href="">Terms of Service</a>
+                </div>
+                <div class="footer_link item2">
+                    <h2>Contact Us</h2>
+                    <a href="">Contact</a>
+                    <a href="">Support</a>
+                    <a href="">Sponsorships</a>
+                </div>
+                <div class="footer_link item3">
+                    <h2>Social Media</h2>
+                    <a href="">Instagram</a>
+                    <a href="">Facebook</a>
+                    <a href="">Youtube</a>
+                    <a href="">Twitter</a>
+                </div>
+                
+                <div class="footer_email_form">
+                    <h2>Sign Up</h2>
+                    <input type="email" placeholder="Enter Your Email" id="footer_email">
+                    <input type="submit"  value="Sign Up" id="footer_email_btn">
+                </div>
+            </div>
+    </div>
+</div>
+<script>
+      function dropdown() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+
+
+
+
+
+</script>
+<style>
+    #signOut
+    {
+    font-size: 18px;
+    color: #FFFFFF;
+    text-decoration:none;
+    background: #006666;
+    border-radius: 30px;
+    padding: 10px 48px;
+    display: inline-block;
+    transition: 300ms;
+}
+#signOut li :hover{
+    transform: translateY(-2px);
+}
+#signOut li {
+     list-style: none;
+     margin-bottom: 280px;
+}
+    
+</style>
+</body>
+
+</html>
